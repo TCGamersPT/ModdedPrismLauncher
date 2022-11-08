@@ -13,6 +13,7 @@ jobs:
         run: |
            git clone --recursive https://github.com/TCGamersPT/ModdedPrismLauncher.git
            cd ModdedPrismLauncher/
+           ls -la
 
       - name: Building Portable
         run: |
