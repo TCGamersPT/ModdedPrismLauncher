@@ -9,18 +9,16 @@ jobs:
         run: |
          sudo apt-get install -y cmake ninja-build openjdk-17-jdk libgl1-mesa-dev zlib1g-dev qtbase5-dev qtchooser qt5-qmake qtbase5-dev-tools libqt5core5a libqt5network5 libqt5gui5
 
-      - name: Installing makedeb 
-        run: |
-          wget -qO - 'https://proget.makedeb.org/debian-feeds/makedeb.pub' | gpg --dearmor | sudo tee /usr/share/keyrings/makedeb-archive-keyring.gpg 1> /dev/null
-          echo 'deb [signed-by=/usr/share/keyrings/makedeb-archive-keyring.gpg arch=all] https://proget.makedeb.org/ makedeb main' | sudo tee /etc/apt/sources.list.d/makedeb.list
-          sudo apt-get -y update
-          
       - name: Fetching latest release
         run: |
           git clone https://github.com/TCGamersPT/ModdedPrismLauncher.git
-          
-      - name:  Building deb
-        run: | 
+
+      - name: Making .deb file 
+        run: |
+          export MAKEDEB_RELEASE='makedeb'
+          wget https://shlink.makedeb.org/install
+          mv install install.sh
+          bash install.sh
           pwd
           cd ModdedPrismLauncher/
           ls -la
