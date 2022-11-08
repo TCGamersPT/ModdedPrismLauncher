@@ -1,0 +1,13 @@
+[Desktop Entry]
+Version=1.0
+Name=Custom Launcher
+Comment=A custom launcher for Minecraft that allows you to easily manage multiple installations of Minecraft at once. MOD BY YTPCmc
+Type=Application
+Terminal=false
+Exec=@Launcher_APP_BINARY_NAME@
+StartupNotify=true
+Icon=org.prismlauncher.PrismLauncher
+Categories=Game;ActionGame;AdventureGame;Simulation;
+Keywords=game;minecraft;launcher;mc;multimc;polymc;
+StartupWMClass=PrismLauncher
+MimeType=application/zip;application/x-modrinth-modpack+zip
