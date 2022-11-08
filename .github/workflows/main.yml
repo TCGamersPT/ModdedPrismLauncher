@@ -13,16 +13,14 @@ jobs:
         run: |
           git clone https://github.com/TCGamersPT/ModdedPrismLauncher.git
 
+      - name: Install makedeb
+        shell: bash {0}
+        run: |
+          bash -ci "$(wget -qO - 'https://shlink.makedeb.org/install')"
+
       - name: Making .deb file 
         run: |
-          export MAKEDEB_RELEASE='makedeb'
-          wget https://shlink.makedeb.org/install
-          mv install install.sh
-          bash install.sh
-          pwd
           cd ModdedPrismLauncher/
-          ls -la
           cd .github/
-          ls -la
           cd makedeb/
           makedeb
