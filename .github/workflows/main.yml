@@ -12,11 +12,10 @@ jobs:
       - name: Fetching latest version of ModdedPrismLauncher
         run: |
            git clone --recursive https://github.com/TCGamersPT/ModdedPrismLauncher.git
-           cd ModdedPrismLauncher/
-           ls -la
 
       - name: Building Portable
         run: |
+          cd ModdedPrismLauncher/
           cmake -S . -B build -G Ninja \
            -DCMAKE_BUILD_TYPE=Release \
            -DCMAKE_INSTALL_PREFIX="/usr" \ # Use "/usr" when building Linux packages. If building not for package, use "/usr/local"
