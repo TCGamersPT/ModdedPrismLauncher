@@ -7,8 +7,7 @@ jobs:
     steps:
       - name: Install Build Dependencies
         run: |
-          sudo apt update & sudo apt upgrade
-          sudo apt install cmake ninja-build openjdk-17-jdk libgl1-mesa-dev zlib1g-dev qtbase5-dev qtchooser qt5-qmake qtbase5-dev-tools libqt5core5a libqt5network5 libqt5gui5
+         sudo apt-get install -y cmake ninja-build openjdk-17-jdk libgl1-mesa-dev zlib1g-dev qtbase5-dev qtchooser qt5-qmake qtbase5-dev-tools libqt5core5a libqt5network5 libqt5gui5
 
       - name: Fetching latest version of ModdedPrismLauncher
         run: |
