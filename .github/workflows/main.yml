@@ -9,17 +9,10 @@ jobs:
         run: |
          sudo apt-get install -y cmake ninja-build openjdk-17-jdk libgl1-mesa-dev zlib1g-dev qtbase5-dev qtchooser qt5-qmake qtbase5-dev-tools libqt5core5a libqt5network5 libqt5gui5
 
-      - name: Fetching latest version of ModdedPrismLauncher
+      - name: Installing makedeb 
         run: |
-           git clone --recursive https://github.com/TCGamersPT/ModdedPrismLauncher.git
-
-      - name: Building Portable
-        run: |
-          cd ModdedPrismLauncher/
-          cmake -S . -B build -G Ninja \
-           -DCMAKE_BUILD_TYPE=Release \
-           -DCMAKE_INSTALL_PREFIX="/usr" \ # Use "/usr" when building Linux packages. If building not for package, use "/usr/local"
-           -DENABLE_LTO=ON
-           -D_MAKE_PREFIX=./test
-           cmake --build build
-           cmake --install build
+          bash -ci "$(wget -qO - 'https://shlink.makedeb.org/install')"
+      - name:  Building deb
+        run: | 
+          cd ModdedPrismLauncher/.github/makedeb\
+          makedeb
