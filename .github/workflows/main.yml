@@ -1,0 +1,25 @@
+name: GitHub Actions Demo
+run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+on: [push]
+jobs:
+  Linux-Build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install Build Dependencies
+      - run: |
+          sudo apt update & sudo apt upgrade
+          sudo apt install cmake ninja-build openjdk-17-jdk libgl1-mesa-dev zlib1g-dev qtbase5-dev qtchooser qt5-qmake qtbase5-dev-tools libqt5core5a libqt5network5 libqt5gui5
+
+      - name: Fetching latest version of ModdedPrismLauncher
+      - run: |
+           git clone --recursive https://github.com/TCGamersPT/ModdedPrismLauncher.git
+           cd ModdedPrismLauncher/
+
+      - name: Building Portable
+      - run: |
+          cmake -S . -B build -G Ninja \
+           -DCMAKE_BUILD_TYPE=Release \
+           -DCMAKE_INSTALL_PREFIX="/usr" \ # Use "/usr" when building Linux packages. If building not for package, use "/usr/local"
+           -DENABLE_LTO=ON
+           cmake --build build
+           cmake --install build
