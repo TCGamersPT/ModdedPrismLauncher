@@ -16,5 +16,9 @@ jobs:
           sudo apt-get -y update
       - name:  Building deb
         run: | 
-          cd ModdedPrismLauncher/.github/makedeb
+          cd ModdedPrismLauncher/
+          ls -la
+          cd .github/
+          ls -la
+          cd makedeb/
           makedeb
