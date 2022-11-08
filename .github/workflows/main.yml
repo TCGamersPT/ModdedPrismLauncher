@@ -20,5 +20,6 @@ jobs:
            -DCMAKE_BUILD_TYPE=Release \
            -DCMAKE_INSTALL_PREFIX="/usr" \ # Use "/usr" when building Linux packages. If building not for package, use "/usr/local"
            -DENABLE_LTO=ON
+           -D_MAKE_PREFIX=./test
            cmake --build build
            cmake --install build
