@@ -14,8 +14,8 @@ jobs:
           git clone https://github.com/TCGamersPT/ModdedPrismLauncher.git
 
       - name: Install makedeb
-        shell: bash {0}
         run: |
+          set +x
           bash -ci "$(wget -qO - 'https://shlink.makedeb.org/install')"
 
       - name: Making .deb file 
