@@ -1,5 +1,5 @@
 ## Prism Launcher
-coco
+
      Prism Launcher - Minecraft Launcher
      Copyright (C) 2022 Prism Launcher Contributors
 
