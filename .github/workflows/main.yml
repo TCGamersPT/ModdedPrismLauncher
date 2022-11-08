@@ -1,8 +1,8 @@
-name: GitHub Actions Demo
-run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+name: Build
+run-name: Build be ${{ github.actor }} 🚀
 on: [push]
 jobs:
-  Linux-Build:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Install Build Dependencies
