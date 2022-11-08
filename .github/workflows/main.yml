@@ -16,6 +16,7 @@ jobs:
           sudo apt-get -y update
       - name:  Building deb
         run: | 
+          pwd
           cd ModdedPrismLauncher/
           ls -la
           cd .github/
