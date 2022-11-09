@@ -32,19 +32,6 @@ For Arch, Debian and Gentoo, respectively, you can use these packages to get com
 
 [![prismlauncher-git](https://img.shields.io/badge/aur-prismlauncher--git-blue?style=flat-square)](https://aur.archlinux.org/packages/prismlauncher-qt5-git/) [![prismlauncher-git](https://img.shields.io/badge/aur-prismlauncher--qt5--git-blue?style=flat-square)](https://aur.archlinux.org/packages/prismlauncher-git/) [![prismlauncher-git](https://img.shields.io/badge/mpr-prismlauncher--git-orange?style=flat-square)](https://mpr.makedeb.org/packages/prismlauncher-git) [![prismlauncher-9999](https://img.shields.io/badge/gentoo-prismlauncher--9999-purple?style=flat-square)](https://packages.gentoo.org/packages/games-action/prismlauncher)
 
-## Help & Support
-
-Feel free to create an issue if you need help.
-
-#### Join our Discord server:
-[![Prism Launcher Discord server](https://discordapp.com/api/guilds/1031648380885147709/widget.png?style=banner3)](https://discord.gg/prismlauncher)
-
-#### Join our Matrix space:
-[![PrismLauncher Space](https://img.shields.io/matrix/prismlauncher:matrix.org?style=for-the-badge)](https://matrix.to/#/#prismlauncher:matrix.org)
-
-#### Join our SubReddit:
-[![r/PrismLauncher](https://img.shields.io/reddit/subreddit-subscribers/prismlauncher?style=for-the-badge)](https://www.reddit.com/r/PrismLauncher/)
-
 ## Building
 
 If you want to build Prism Launcher yourself, check [Build Instructions](https://prismlauncher.org/wiki/development/build-instructions/) for build instructions.
