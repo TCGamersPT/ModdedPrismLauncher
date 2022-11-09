@@ -6,6 +6,7 @@
 </picture>
 </p>
 
+THIS LAUNCHER IS NOT PRISM LAUNCHER ITSELF AND IS NOT ENDORSED BY PRISM LAUNCHER.
 
 Prism Launcher is a custom launcher for Minecraft that allows you to easily manage multiple installations of Minecraft at once.
 
